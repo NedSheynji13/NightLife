@@ -42,7 +42,8 @@ public class CameraControl : MonoBehaviour
         Pos.x += Input.GetAxis("Horizontal") * (sensitivity / 2) * Time.deltaTime;
         Pos.y = 20;
         Pos.z += Input.GetAxis("Vertical") * (sensitivity / 2) * Time.deltaTime;
-        //Pos = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * Pos;
+
+        Pos = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * Pos;
         transform.position = Pos;
     }
 
