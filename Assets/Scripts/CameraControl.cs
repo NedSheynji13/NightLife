@@ -19,21 +19,24 @@ public class CameraControl : MonoBehaviour
     {
         CameraZoom();
         CameraTurn();
-        CameraMove();
+        //CameraMove();
     }
 
     void CameraTurn()
     {
-        inputAngle.y += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-        inputAngle.x -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+        if (Input.GetMouseButton(1))
+        {
+            inputAngle.y += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+            inputAngle.x -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
 
-        if (inputAngle.y > 360)
-            inputAngle.y -= 360;
-        else if (inputAngle.y < 0)
-            inputAngle.y += 360;
+            if (inputAngle.y > 360)
+                inputAngle.y -= 360;
+            else if (inputAngle.y < 0)
+                inputAngle.y += 360;
 
-        inputAngle.x = Mathf.Clamp(inputAngle.x, 30, 60);
-        transform.localRotation = Quaternion.Euler(inputAngle);
+            inputAngle.x = Mathf.Clamp(inputAngle.x, 30, 60);
+            transform.localRotation = Quaternion.Euler(inputAngle);
+        }
     }
 
     void CameraMove()
@@ -43,7 +46,6 @@ public class CameraControl : MonoBehaviour
         Pos.y = 20;
         Pos.z += Input.GetAxis("Vertical") * (sensitivity / 2) * Time.deltaTime;
 
-        Pos = Quaternion.Euler(0, transform.rotation.eulerAngles.y, 0) * Pos;
         transform.position = Pos;
     }
 
