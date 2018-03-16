@@ -18,25 +18,7 @@ public class CameraControl : MonoBehaviour
     void LateUpdate()
     {
         CameraZoom();
-        CameraTurn();
-        //CameraMove();
-    }
-
-    void CameraTurn()
-    {
-        if (Input.GetMouseButton(1))
-        {
-            inputAngle.y += Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-            inputAngle.x -= Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-
-            if (inputAngle.y > 360)
-                inputAngle.y -= 360;
-            else if (inputAngle.y < 0)
-                inputAngle.y += 360;
-
-            inputAngle.x = Mathf.Clamp(inputAngle.x, 30, 60);
-            transform.localRotation = Quaternion.Euler(inputAngle);
-        }
+        CameraMove();
     }
 
     void CameraMove()
