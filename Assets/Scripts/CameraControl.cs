@@ -6,11 +6,10 @@ public class CameraControl : MonoBehaviour
 {
     public float sensitivity;
     private float FoV;
-    private Vector3 inputAngle, cameraZoom;
+    private Vector3 cameraZoom;
 
     void Start()
     {
-        inputAngle = new Vector3(45, 0, 0);
         cameraZoom = transform.GetChild(0).position;
         FoV = cameraZoom.z;
     }

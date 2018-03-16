@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4414098429161510}
   - component: {fileID: 114925826815622688}
-  - component: {fileID: 135239284369062706}
-  - component: {fileID: 54868240832895288}
+  - component: {fileID: 54638495428925602}
+  - component: {fileID: 135719874926644272}
   m_Layer: 2
   m_Name: Moth
   m_TagString: Player
@@ -706,7 +706,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1688124010616142}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54868240832895288
+--- !u!54 &54638495428925602
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attraction: 0
---- !u!135 &135239284369062706
+--- !u!135 &135719874926644272
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -760,5 +760,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}

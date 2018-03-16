@@ -18,9 +18,11 @@ public class MothBehaviour : MonoBehaviour
             {
                 if (cols[i].gameObject.GetComponent<Lighter>().lightStrength > attraction)
                     interest = cols[i].gameObject;
-                Move(interest);
+
             }
         }
+        if (interest != null)
+            Move(interest);
     }
     private void Move(GameObject col)
     {
