@@ -175,8 +175,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 200
+  near clip plane: 0.1
+  far clip plane: 1000
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -245,15 +245,30 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1014900346}
-  - component: {fileID: 1014900347}
   - component: {fileID: 1014900344}
+  - component: {fileID: 1014900343}
+  - component: {fileID: 1014900347}
   m_Layer: 0
-  m_Name: LightSpawn
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1014900343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1014900342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11265ca2f8775444f8b0575a9082490c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Moth: {fileID: 1066109919299788, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
+  DeathLight: {fileID: 1933824235734056, guid: 68ba6af485f80cc4ca1a5228ee96f8d2, type: 2}
+  numberOfMoths: 100
 --- !u!65 &1014900344
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -291,45 +306,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 1933824235734056, guid: b9a6f78f47c0d7648808af6adfc4ec22, type: 2}
---- !u!1001 &1548775962
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4414098429161510, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 63953ad2ff4eda04f86f7080d9661bd1, type: 2}
-  m_IsPrefabParent: 0
+  strongLight: {fileID: 1933824235734056, guid: b24c27f2ce079e54ba38a1703010a04d,
+    type: 2}

@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4630831817269368}
   - component: {fileID: 33124139787585518}
+  - component: {fileID: 135979538270967604}
   - component: {fileID: 23137370916115462}
   - component: {fileID: 114598479232990164}
-  - component: {fileID: 135910150455376314}
   m_Layer: 0
-  m_Name: Light
+  m_Name: DeathLight
   m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 02e538a4879b9f843a43d2ed2834bdab, type: 2}
+  - {fileID: 2100000, guid: e700b40cb06291e42a7f318416440790, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,15 +95,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce1d088fa2266c4d96e6c1e68fba4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightStrength: 0
---- !u!135 &135910150455376314
+  lightStrength: 5
+--- !u!135 &135979538270967604
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1933824235734056}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

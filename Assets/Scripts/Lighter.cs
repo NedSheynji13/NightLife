@@ -13,5 +13,12 @@ public class Lighter : MonoBehaviour
         lightStrength -= Time.deltaTime;
         if (lightStrength <= 0)
             Destroy(gameObject);
+            
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+            Destroy(other.gameObject);
     }
 }

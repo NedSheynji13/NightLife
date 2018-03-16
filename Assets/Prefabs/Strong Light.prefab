@@ -20,11 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4630831817269368}
   - component: {fileID: 33124139787585518}
-  - component: {fileID: 135979538270967604}
   - component: {fileID: 23137370916115462}
   - component: {fileID: 114598479232990164}
+  - component: {fileID: 135870569795154952}
   m_Layer: 0
-  m_Name: Light
+  m_Name: Strong Light
   m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ce1d088fa2266c4d96e6c1e68fba4af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightStrength: 0
---- !u!135 &135979538270967604
+  lightStrength: 5
+--- !u!135 &135870569795154952
 SphereCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

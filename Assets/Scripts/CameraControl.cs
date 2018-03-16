@@ -24,9 +24,9 @@ public class CameraControl : MonoBehaviour
     void CameraMove()
     {
         Vector3 Pos = transform.position;
-        Pos.x += Input.GetAxis("Horizontal") * (sensitivity / 2) * Time.deltaTime;
+        Pos.x += Input.GetAxis("Horizontal") * sensitivity * Time.deltaTime;
         Pos.y = 20;
-        Pos.z += Input.GetAxis("Vertical") * (sensitivity / 2) * Time.deltaTime;
+        Pos.z += Input.GetAxis("Vertical") * sensitivity * Time.deltaTime;
 
         transform.position = Pos;
     }
@@ -34,7 +34,7 @@ public class CameraControl : MonoBehaviour
     void CameraZoom()
     {
         FoV += Input.GetAxis("Mouse ScrollWheel") * (sensitivity / 2);
-        FoV = Mathf.Clamp(FoV, -40, 0);
+        FoV = Mathf.Clamp(FoV, -400, -200);
         Camera.main.transform.localPosition = Vector3.Lerp(Camera.main.transform.localPosition, new Vector3(0, 0, FoV), Time.deltaTime * 20);
     }
 }
